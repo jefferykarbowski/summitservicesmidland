@@ -6,6 +6,7 @@ const phoneJackson = "989-708-5901";
 const phoneOliverTel = "+19899488955";
 const phoneJacksonTel = "+19897085901";
 const instagram = "https://www.instagram.com/midland_summitservices/";
+const facebook = "https://www.facebook.com/profile.php?id=61560617949872";
 const cities = ["Midland", "Bay City", "Saginaw"];
 ---
 <Base>
@@ -488,17 +489,30 @@ const cities = ["Midland", "Bay City", "Saginaw"];
 
         <div class="mt-10 text-center">
           <p class="text-sm text-navy-600">Also find us on social:</p>
-          <div class="mt-4 flex items-center justify-center gap-3">
+          <div class="mt-4 flex flex-wrap items-center justify-center gap-3">
             <a
               href={instagram}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Summit Services on Instagram"
               class="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-navy-800 ring-2 ring-navy-200 hover:ring-sky-bright transition"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
                 <path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.242 1.311 3.608.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.242 1.249-3.608 1.311-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.242-1.311-3.608C2.212 15.584 2.2 15.2 2.2 12s.012-3.584.07-4.85c.062-1.366.336-2.633 1.311-3.608.975-.975 2.242-1.249 3.608-1.311C8.416 2.212 8.8 2.2 12 2.2Zm0 1.8c-3.15 0-3.522.012-4.766.07-1.04.048-1.605.222-1.98.371-.498.193-.853.424-1.227.798-.374.374-.605.729-.798 1.227-.149.375-.323.94-.371 1.98C2.812 8.478 2.8 8.85 2.8 12s.012 3.522.07 4.766c.048 1.04.222 1.605.371 1.98.193.498.424.853.798 1.227.374.374.729.605 1.227.798.375.149.94.323 1.98.371 1.244.058 1.616.07 4.766.07s3.522-.012 4.766-.07c1.04-.048 1.605-.222 1.98-.371.498-.193.853-.424 1.227-.798.374-.374.605-.729.798-1.227.149-.375.323-.94.371-1.98.058-1.244.07-1.616.07-4.766s-.012-3.522-.07-4.766c-.048-1.04-.222-1.605-.371-1.98a3.305 3.305 0 0 0-.798-1.227 3.305 3.305 0 0 0-1.227-.798c-.375-.149-.94-.323-1.98-.371C15.522 4.012 15.15 4 12 4Zm0 3.06A4.94 4.94 0 1 1 7.06 12 4.946 4.946 0 0 1 12 7.06Zm0 8.14A3.2 3.2 0 1 0 8.8 12 3.2 3.2 0 0 0 12 15.2Zm5.07-8.4a1.16 1.16 0 1 1-1.16-1.16 1.16 1.16 0 0 1 1.16 1.16Z"/>
               </svg>
               @midland_summitservices
+            </a>
+            <a
+              href={facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Summit Services on Facebook"
+              class="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-navy-800 ring-2 ring-navy-200 hover:ring-sky-bright transition"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 text-[#1877F2]">
+                <path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12Z"/>
+              </svg>
+              Summit Services
             </a>
           </div>
         </div>
@@ -537,6 +551,11 @@ const cities = ["Midland", "Bay City", "Saginaw"];
             <li>
               <a class="hover:text-white" href={instagram} target="_blank" rel="noopener noreferrer">
                 Instagram: @midland_summitservices
+              </a>
+            </li>
+            <li>
+              <a class="hover:text-white" href={facebook} target="_blank" rel="noopener noreferrer">
+                Facebook: Summit Services
               </a>
             </li>
           </ul>
