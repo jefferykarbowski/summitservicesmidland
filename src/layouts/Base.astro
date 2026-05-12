@@ -1,0 +1,86 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+}
+
+const {
+  title = "Summit Services — Window Washing & Lawn Care | Midland, Bay City & Saginaw, MI",
+  description = "Locally owned window washing and lawn mowing serving the Tri-Cities (Midland, Bay City, Saginaw). Streak-free windows and crisp-cut lawns from Oliver & Jackson. Free quotes.",
+  canonical,
+} = Astro.props;
+
+const siteUrl = "https://summitservicesmidland.com";
+const ogImage = `${siteUrl}/images/banner-services.png`;
+const pageUrl = canonical ?? new URL(Astro.url.pathname, siteUrl).toString();
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={pageUrl} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="/images/logo-circle.jpg" />
+    <link rel="apple-touch-icon" href="/images/logo-circle.jpg" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content="Summit Services" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Local Business JSON-LD -->
+    <script is:inline type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Summit Services",
+      "image": ogImage,
+      "url": siteUrl,
+      "telephone": "+19899488955",
+      "areaServed": [
+        { "@type": "City", "name": "Midland", "addressRegion": "MI" },
+        { "@type": "City", "name": "Bay City", "addressRegion": "MI" },
+        { "@type": "City", "name": "Saginaw", "addressRegion": "MI" }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Midland",
+        "addressRegion": "MI",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://www.instagram.com/midland_summitservices/"
+      ],
+      "priceRange": "$$",
+      "description": description
+    })}/>
+  </head>
+  <body class="min-h-screen bg-white text-navy-900">
+    <slot />
+  </body>
+</html>

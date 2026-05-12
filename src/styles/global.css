@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-50:  #eef3fb;
+  --color-navy-100: #d6e0f3;
+  --color-navy-200: #adc1e7;
+  --color-navy-300: #7a9ad6;
+  --color-navy-400: #4972bf;
+  --color-navy-500: #2a52a3;
+  --color-navy-600: #1d3f87;
+  --color-navy-700: #122e6a;
+  --color-navy-800: #0d2b58;
+  --color-navy-900: #061a3a;
+
+  --color-sky-bright:  #2c8ef0;
+  --color-sky-soft:    #b8d8ff;
+  --color-sky-mist:    #e7f1ff;
+
+  --color-accent-300: #fde047;
+  --color-accent-400: #facc15;
+  --color-accent-500: #eab308;
+  --color-accent-600: #ca8a04;
+
+  --color-grass-500: #56a64a;
+  --color-grass-600: #3f8a35;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-navy-900);
+  background: #ffffff;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* Subtle texture for hero background */
+.hero-bg {
+  background:
+    radial-gradient(1200px 600px at 85% -10%, rgba(44, 142, 240, 0.18), transparent 60%),
+    radial-gradient(900px 500px at 10% 110%, rgba(86, 166, 74, 0.10), transparent 60%),
+    linear-gradient(180deg, #f4f8ff 0%, #ffffff 70%);
+}
+
+/* Diagonal section divider used between hero & services */
+.diagonal-divider::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: white;
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+/* Animated subtle bubbles on the hero (decorative only) */
+@keyframes drift {
+  0%   { transform: translateY(0)    scale(1);   opacity: 0.6; }
+  50%  { transform: translateY(-20px) scale(1.05); opacity: 0.9; }
+  100% { transform: translateY(0)    scale(1);   opacity: 0.6; }
+}
+.bubble { animation: drift 8s ease-in-out infinite; }
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--color-accent-400);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Reusable card hover */
+.card-hover {
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -20px rgba(13, 43, 88, 0.25);
+}

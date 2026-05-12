@@ -1,0 +1,23 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Page Not Found — Summit Services" description="That page doesn't exist. Head back home to find what you're looking for.">
+  <main class="min-h-[70vh] flex items-center">
+    <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 py-20 text-center">
+      <img src="/images/logo-circle.jpg" alt="Summit Services" width="120" height="120" class="mx-auto h-28 w-28 rounded-full shadow-xl ring-4 ring-navy-100" />
+      <p class="mt-8 text-sm font-semibold uppercase tracking-[0.18em] text-sky-bright">404</p>
+      <h1 class="mt-2 font-display text-4xl sm:text-5xl font-extrabold text-navy-900">
+        We can't find that page.
+      </h1>
+      <p class="mt-4 text-navy-700">
+        Looks like a window we forgot to wash. Let's get you back to the main page.
+      </p>
+      <a
+        href="/"
+        class="mt-8 inline-flex items-center gap-2 rounded-full bg-accent-400 hover:bg-accent-500 px-6 py-3.5 text-base font-bold text-navy-900 shadow-lg shadow-accent-400/30 transition"
+      >
+        Back to home
+      </a>
+    </div>
+  </main>
+</Base>
