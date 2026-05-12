@@ -38,7 +38,7 @@ assets-source/          # Original image archive (not served)
 Pushes to `main` auto-deploy to Cloudflare Pages.
 
 - Project name: `summitservicesmidland`
-- Production: https://summitservicesmidland.pages.dev (and `summitservicesmidland.com` once registered)
+- Production: https://summitservicesmidland.pages.dev (and `midlandsummitservices.com` once registered)
 - Build command: `npm run build`
 - Output directory: `dist`
 
